@@ -1,0 +1,51 @@
+﻿@model WebApplication3.Models.Manager
+
+@{
+    ViewBag.Title = "ManagerMenu";
+}
+
+
+<div class="jumbotron">
+    <h1 class="display-4">Manager Menu: </h1>
+
+</div>
+
+
+
+<div class="row text-center">
+    <div class="col">
+        @Html.ActionLink("Add Manager ", "AddManager", "Manager", new { area = "" }, new { @class = "btn btn-outline-success" })
+    </div>
+
+    <div class="col">
+        @Html.ActionLink("View messages", "Messageview", "Manager", new { area = "" }, new { @class = "btn btn-outline-success" })
+    </div>
+
+    <div class="col">
+        @Html.ActionLink("QA Editor", "QAedittor", "Manager", new { area = "" }, new { @class = "btn btn-outline-success" })
+    </div>
+
+    <div class="col">
+        @Html.ActionLink("Content Editor", "Contentedittor", "Manager", new { area = "" }, new { @class = "btn btn-outline-success" })
+    </div>
+
+    <div class="col">
+        @Html.ActionLink("Statistics", "Statistics", "Manager", new { area = "" }, new { @class = "btn btn-outline-success" })
+    </div>
+    <div class="col">
+        @Html.ActionLink("Boards", "Boards", "Manager", new { area = "" }, new { @class = "btn btn-outline-success" })
+    </div>
+    <div class="col">
+        @Html.ActionLink("Log out", "LogOut", "Manager", new { area = "" }, new { @class = "btn btn-outline-success" })
+    </div>
+    @*
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <div class="col">
+                @Html.ActionLink("Employee Registration", "enterSignUp", "Employee", new { area = "" }, new { @class = "btn btn-outline-success" })
+            </div>
+        }
+    *@
+</div>
+
+

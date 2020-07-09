@@ -1,0 +1,31 @@
+﻿@model WebApplication3.ViewModel.VM
+@using WebApplication3.Models
+
+<h2>Wanted Board</h2>
+<br />
+
+
+<table class="table" id="WantedTable">
+
+    <tr>
+        <td>Employer First Name</td>
+        <td>Employer Last Name</td>
+        <td>Phone Number</td>
+        <td>Email</td>
+        <td>Description</td>
+    </tr>
+
+    @foreach (WantedAd ad in Model.WantedAds)
+    {
+        <tr>
+            <td>@ad.FirstName</td>
+            <td>@ad.LastName</td>
+            <td>@ad.Phone</td>
+            <td>@ad.Email</td>
+            <td>@ad.Description</td>
+            <td></td>
+        </tr>
+
+    }
+
+</table>

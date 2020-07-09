@@ -1,0 +1,49 @@
+﻿@model WebApplication3.Models.Employer
+
+@{
+    ViewBag.Title = "EmployerMenu";
+}
+
+
+<div class="jumbotron">
+
+    <h1 class="display-4">Employer Menu:</h1>
+</div>
+
+
+
+<div class="row text-center">
+    <div class="col">
+        @Html.ActionLink("QA", "QAview", "Employer", new { area = "" }, new { @class = "btn btn-outline-success" })
+    </div>
+
+    <div class="col">
+        @Html.ActionLink("Message to manager", "MessageSend", "Employer", new { area = "" }, new { @class = "btn btn-outline-success" })
+    </div>
+
+    <div class="col">
+        @Html.ActionLink("Content", "Contentedittor", "Employer", new { area = "" }, new { @class = "btn btn-outline-success" })
+    </div>
+
+    <div class="col">
+        @Html.ActionLink("Watching The Board", "Boards", "Employer", new { area = "" }, new { @class = "btn btn-outline-success" })
+    </div>
+
+    <div class="col">
+        @Html.ActionLink("Post wanted ad", "WantedPublish", "Employer", new { area = "" }, new { @class = "btn btn-outline-success" })
+    </div>
+
+    <div class="col">
+        @Html.ActionLink("Log out", "LogOut", "Employee", new { area = "" }, new { @class = "btn btn-outline-success" })
+    </div>
+
+    @if (null != TempData["alertMessage"])
+    {
+        <script type="text/javascript">
+            alert("@TempData["alertMessage"]");
+        </script>
+    }
+
+</div>
+
+

@@ -1,0 +1,23 @@
+﻿
+@model WebApplication3.Models.LookingAd
+
+@{
+    /*aaa*/
+
+    ViewBag.Title = "LookingPublish";
+}
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<h2>Looking ad publish</h2>
+<hr />
+
+@using (Html.BeginForm("LookingPublish", "Employee", FormMethod.Post))
+
+{
+
+    <input id="role" name="role" type="hidden" value="LookingAd" />
+    <input class="btn btn-outline-primary" id="submit" type="submit" value="Create CV" />
+    <h4 class="text-danger">@ViewBag.message</h4>
+}
+

@@ -1,0 +1,36 @@
+﻿@model WebApplication3.ViewModel.VM
+@using WebApplication3.Models
+
+<h2>Looking for a job Board</h2>
+<br />
+
+<table class="table" id="LookingTable">
+
+    <tr>
+        <td>Employee First Name</td>
+        <td>Employee Last Name</td>
+        <td>Phone Number</td>
+        <td>Email</td>
+        <td>Cv</td>
+    </tr>
+
+
+
+    
+        @foreach (LookingAd ad in Model.LookingAds)
+        {
+            <tr>
+                <td>@ad.FirstName</td>
+                <td>@ad.LastName</td>
+                <td>@ad.Phone</td>
+                <td>@ad.Email</td>
+                <td>@if (ad.Cv != "")
+                {<a href="@Url.Action("moveShowCV", "Employee", new RouteValueDictionary(new { cvid = ad.ID }))">To CV</a>} </td>
+            </tr>
+
+        }
+
+
+    
+
+</table>
